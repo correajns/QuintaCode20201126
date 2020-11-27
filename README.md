@@ -3,6 +3,7 @@
 projeto criado para exemplificar o funcionamento entre angular e API de maneira limples
 
 roteiro de execução
+
 instalar 
 	.netcore
 	angular
