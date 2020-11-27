@@ -1,0 +1,36 @@
+
+<button class="btn btn-primary" (click)="IncluirUsuario()">
+    incluir
+    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+</button>
+|
+
+<button class="btn btn-danger" (click)="ExcluirUsuario()">
+    Excluir
+    <i class="fa fa-trash" aria-hidden="true"></i>
+</button>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Data nascimento</th>
+            <th>Data Inclusao</th>
+            <th>RG</th>
+            <th>CPF</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of usuarios">
+            <td>{{u.id}}</td>
+            <td>{{u.nome}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.dataNasc | date: 'dd/MM/yyyy'}}</td>
+            <td>{{u.dataInclusao | date: 'dd/MM/yyyy'}}</td>
+            <td>{{u.rg}}</td>
+            <td>{{u.cpf}}</td>
+        </tr>
+    </tbody>
+</table>
